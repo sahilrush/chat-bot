@@ -10,7 +10,6 @@ const geistSans = localFont({
   weight: "100 900",
 });
 
-
 export const metadata: Metadata = {
   title: "Chat-Bot",
   description: "Ask anything you want to know",
@@ -24,10 +23,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Providers>
-      <body className={cn(geistSans.className, "min-h-screen antialiased")}>
-        <main className="h-screen  dark text-foreground bg-background">{children}</main>
-      </body>
-    </Providers>
+        <body
+          className={cn(geistSans.className, "min-h-screen antialiased")}
+        >
+          <main className="h-screen dark text-foreground bg-background">
+            {children}
+          </main>
+        </body>
+      </Providers>
     </html>
   );
 }
